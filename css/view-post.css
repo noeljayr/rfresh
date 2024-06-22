@@ -1,0 +1,116 @@
+.post{
+    background-color: var(--white);
+    border-radius: var(--radius);
+
+}
+
+
+.post-view{
+    grid-template-columns: 1fr 40%;
+}
+
+
+@media screen and (max-width: 800px) {
+    .post-view{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .post{
+        height: fit-content;
+    }
+}
+
+.post .content a{
+    background: linear-gradient(
+    134.16deg,
+    rgba(194, 169, 10, 0) -8.01%,
+    rgba(172, 191, 15, 0.85) -8%,
+    rgba(9, 128, 0, 0.84) 78.49%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.post img{
+    border-radius: var(--radius-md);
+}
+
+.tags .tag{
+    background-color: var(--secondary);
+    border-radius: var(--radius-sm);
+}
+
+.tags{
+    background-color: var(--white);
+    border-radius: var(--radius);
+}
+
+.streaming-platforms {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 765px) {
+    .streaming-platforms {
+        
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+.streaming-platforms a{
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary);
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+}
+
+.streaming-platforms a img{
+    height: 1.5rem;
+}
+.streaming-platforms a .platform-icon{
+    height: 2rem;
+}
+
+
+.subscribe{
+    background-color: var(--white);
+    border-radius: var(--radius);
+    align-items: center;
+}
+
+.subscribe .input-group{
+    margin: 0;
+    border-radius: var(--radius-sm);
+}
+
+.subscribe .cta{
+    width: 100%;
+}
+
+.subscribe .social-links{
+    width: fit-content;
+}
+
+.subscribe .social-links a{
+    background-color: var(--secondary);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+.subscribe .social-links a img{
+    height: 1.5rem;
+}
+

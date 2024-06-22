@@ -1,0 +1,406 @@
+/*Events*/
+.events .event {
+  position: relative;
+  display: flex;
+  padding: 1rem;
+  z-index: 1;
+  background-color: var(--white);
+  justify-content: space-between;
+  border-radius: var(--radius);
+}
+
+.calendar {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0px 2.06153px 6.91611px 0px rgba(13, 45, 84, 0.04),
+    0px 6.92426px 23.22976px 0px rgba(13, 45, 84, 0.05),
+    0px 31px 104px 0px rgba(13, 45, 84, 0.09);
+  height: 14rem;
+  width: 14rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.calendar .top {
+  background: var(--primary-gradient);
+  height: 40%;
+  width: 100%;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+  padding: var(--padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.top .date {
+  font-size: var(--font-m);
+  color: var(--off-white);
+  margin-top: 0.5rem;
+}
+
+.calendar .top .circles {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  top: 5px;
+}
+
+.calendar .top .circles span {
+  height: 0.8rem;
+  width: 0.95rem;
+  background-color: var(--black);
+  border-radius: 50%;
+}
+
+.calendar .top .handles {
+  display: flex;
+  gap: 0.8rem;
+  position: absolute;
+  top: -0.65rem;
+}
+
+.calendar .top .handles span {
+  width: 0.65rem;
+  height: 1.5rem;
+  border-radius: 0.2rem;
+  background-color: #e2e2e2;
+}
+
+.calendar .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 4.5rem;
+}
+
+@media screen and (max-width: 720px) {
+  .calendar {
+    height: 10rem;
+    width: 10rem;
+  }
+  .calendar .top {
+    height: 47%;
+  }
+  .calendar .bottom {
+    font-size: 3.5rem;
+  }
+}
+
+.event .event-details {
+  height: fit-content;
+  width: 20rem;
+  margin-top: 1rem;
+}
+
+.event .event-details img {
+  width: 100%;
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius);
+}
+
+@media screen and (max-width: 480px) {
+  .event .event-details {
+    width: 100%;
+  }
+  .event .event-details img {
+    width: 100%;
+    aspect-ratio: 4/4;
+    height: initial;
+  }
+}
+
+/* .editor ul {
+    list-style: ;
+  } */
+
+/*Events*/
+
+.event-container {
+  width: 60%;
+  justify-self: center;
+  align-self: center;
+}
+
+.main-content .event-container {
+  width: 80%;
+}
+
+.admin-event .event-container {
+  width: 60%;
+}
+
+.event-wrapper {
+  width: 100%;
+  background-color: var(--white);
+
+  border-radius: var(--radius);
+
+  height: fit-content;
+  grid-template-columns: 40% 1fr;
+}
+
+@media screen and (max-width: 800px) {
+  .main-content .event-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .main-content .event-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.event-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.event-wrapper .event-poster {
+  width: 100%;
+  height: fit-content;
+}
+
+.event-poster .cta {
+  background: var(--secondary);
+  width: 100%;
+  color: var(--black);
+  border-radius: var(--radius-sm);
+}
+
+.event-wrapper .event-description {
+  background-color: var(--off-white);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-s);
+}
+
+.event-wrapper .event-link {
+  padding: 0.5rem;
+  /* height: 2rem; */
+  width: 100%;
+  background: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--black);
+}
+
+.event-container .btn-container {
+  border-radius: var(--radius);
+  width: 100%;
+  background-color: var(--white);
+  grid-template-columns: 1fr 1fr;
+}
+
+.event-container .event-info {
+  position: relative;
+}
+
+.event-container .event-info .edit-btn {
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d8e7fe;
+  border-radius: 50%;
+  z-index: 2;
+  right: 0rem;
+  top: -5px;
+  cursor: pointer;
+}
+
+.event-container .event-info .edit-btn img {
+  height: 1rem;
+  width: auto;
+}
+
+.event-container .btn-container .cta {
+  width: 100%;
+}
+
+.event-container .btn-container .delete {
+  background: var(--danger);
+}
+
+.event-container .btn-container .disabled {
+  opacity: 0.5;
+}
+
+.date-triger,
+.date-trigger-2,
+.select-trigger,
+.guest-input-trigger {
+  width: 110%;
+  height: 120%;
+  position: absolute;
+  cursor: pointer;
+  left: -15%;
+  top: -10%;
+  transition: ease 0.2s;
+  border-radius: var(--radius);
+}
+
+.date-triger:hover,
+.date-trigger-2:hover,
+.select-trigger:hover,
+.guest-input-trigger:hover {
+  background-color: var(--secondary);
+}
+
+.date-picker {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: -100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition);
+  border-radius: var(--radius);
+  box-shadow: 0px 9px 72px rgba(0, 0, 0, 0.035),
+    0px 1.12694px 9.01552px rgba(0, 0, 0, 0.07);
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 3;
+}
+
+.date-picker-active {
+  top: 1.5rem;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.7s;
+}
+.date-picker * {
+  font-family: "Montserrat";
+}
+
+.error-toast i {
+  color: red;
+  margin-right: 5px;
+  font-size: 1.5rem;
+}
+
+.calendar-input {
+  border-collapse: collapse;
+}
+
+.calendar-input .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: var(--font-ss);
+}
+
+#monthYear {
+  font-size: var(--font-ss);
+  width: 100%;
+  text-align: center;
+}
+
+.calendar-input .header button,
+.calendar-input .header span {
+  background-color: transparent;
+  border: none;
+  font-size: var(--font-ss);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: ease 0.3s;
+}
+
+.calendar-input .header button:hover,
+.calendar-input .header span:hover {
+  background-color: var(--secondary);
+}
+
+.calendar-input th {
+  background-color: var(--secondary);
+  padding: 0.5rem;
+  text-align: center;
+  position: relative;
+  cursor: default;
+  font-size: var(--font-ss);
+}
+
+.calendar-input th:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.calendar-input th:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.calendar-input td {
+  border-radius: 5px;
+  padding: 0.5em;
+  text-align: center;
+  font-size: var(--font-ss);
+  transition: ease 0.3s;
+}
+
+.calendar-input td:hover {
+  background-color: var(--secondary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.calendar-input tbody .ignore {
+  background-color: transparent;
+  cursor: default;
+}
+
+.calendar-input td.selected {
+  background: var(--primary-gradient);
+  color: var(--off-white);
+}
+
+.calendar-input td.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.calendar-input td.disabled:hover {
+  background-color: transparent;
+}
+
+.avatar-upload {
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+}
+
+.event-poster .avatar-preview {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+
+.avatar-upload .avatar-edit input + label:after {
+  content: "Choose image";
+}
+.avatar-upload .avatar-edit input + label {
+  width: 100%;
+  height: fit-content;
+  padding: 0.5rem;
+  margin-bottom: 0;
+  border-radius: var(--radius-sm);
+  background: var(--secondary);}

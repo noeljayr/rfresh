@@ -1,0 +1,148 @@
+.add-admin-btn {
+  width: 4rem;
+  height: 4rem;
+  transition: var(--transition);
+  border-radius: var(--radius);
+  background-color: var(--white);
+  outline: 3px solid transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.add-admin-btn:hover {
+  outline: 3px solid var(--secondary);
+}
+
+.add-admin-btn img {
+  height: 2.5rem;
+  width: auto;
+}
+
+.admin-container .admin {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  align-items: center;
+  grid-template-columns: 5rem 1fr auto;
+}
+
+.admin-container .admin .profile {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--off-white);
+  border-radius: var(--radius);
+}
+
+.admin-container .admin .profile img {
+  height: 2.5rem;
+  width: auto;
+}
+
+.admin-container .admin .info {
+  grid-template-columns: 40% 1fr;
+  row-gap: 0.5rem;
+}
+
+@media screen and (max-width: 640px) {
+  .admin-container .admin .info .email {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
+  .admin-container .admin .info {
+    grid-template-columns: auto 1fr;
+  }
+
+  .admin-container .admin .info .name {
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .admin-container .admin {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-container .admin .info .status {
+  font-size: var(--font-ss);
+  background-color: var(--secondary);
+  color: var(--primary);
+  width: fit-content;
+  border-radius: var(--radius);
+}
+
+.admin-container .action .deactivate {
+  background: var(--danger);
+}
+
+.admin-container .action span{
+  width: 7rem;
+}
+
+.admin-container .admin .info .admin-diactived {
+  background-color: var(--danger-2);
+  color: var(--danger);
+}
+
+.popup-form{
+  position: fixed;
+  z-index: 21;
+  background-color: var(--off-white);
+  border-radius: var(--radius);
+  top: 2rem;
+  align-self: unset;
+  width: fit-content;
+}
+
+@media screen and (max-width: 600px) {
+  .popup-form{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .popup-form{
+    width: calc(100% - 4rem);
+  }
+}
+
+.add-admin-form{
+  background-color: var(--off-white);
+  z-index: 21;
+  position: fixed;
+  top: 2rem;
+  width: 40%;
+  justify-self: center;
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+}
+@media screen and (max-width: 900px) {
+  .add-admin-form{
+  width: 60%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .add-admin-form{
+    width: calc(100% - 4rem);
+  }
+}
+.popup-form .cta{
+  font-size: var(--font-ss);
+  height: 2.2rem;
+  border-radius: var(--radius-md);
+}
+
+.add-admin-form .cta{
+  width: 100%;
+}
+
+
+
+.popup-form .diactivate{
+  background: var(--danger);
+}
+
+.popup-form p{
+  grid-column: 1/span 2;
+}

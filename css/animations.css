@@ -1,0 +1,187 @@
+.ui-success,
+.ui-error {
+  width: 100px;
+  height: 100px;
+}
+
+#login-form .ui-error {
+  width: 1.5rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#login-form .error-container,
+.form .msg-container, 
+.settings-form .msg-container  {
+  display: flex;
+  background-color: rgba(242, 101, 34, 0.15);
+  width: 100%;
+  padding: 0.4rem;
+  border-radius: var(--radius);
+  align-items: center;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+#login-form .error-container-active {
+  display: flex;
+}
+
+#login-form .error-container .msg,
+.form .msg-container .msg,
+.settings-form .msg-container .msg {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+.form .msg-container,
+.settings-form .msg-container {
+  display: flex;
+  margin: 0;
+  width: fit-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: none;
+}
+
+.form .success-container,
+.settings-form .success-container {
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+.modal-form  .error-container{
+	background-color: rgba(255, 0, 0, 0.1);
+}
+
+.form .success-active,
+.form .error-active,
+.settings-form .success-active,
+.settings-form .error-active {
+  display: flex;
+}
+
+.form .msg-container .svg,
+.settings-form .msg-container .svg {
+  width: 1.6rem;
+  height: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-success-circle {
+  stroke-dasharray: 260.75219024795285px, 260.75219024795285px;
+  stroke-dashoffset: 260.75219024795285px;
+  transform: rotate(220deg);
+  transform-origin: center center;
+  stroke-linecap: round;
+}
+.ui-success-path {
+  stroke-dasharray: 60px 64px;
+  stroke-dashoffset: 62px;
+  stroke-linecap: round;
+}
+.success-active .ui-success-circle {
+  animation: ani-success-circle 1s ease-in both;
+}
+.success-active .ui-success-path {
+  animation: ani-success-path 0.4s 1s ease-in both;
+}
+@keyframes ani-success-circle {
+  to {
+    stroke-dashoffset: 782.2565707438586px;
+  }
+}
+@keyframes ani-success-path {
+  0% {
+    stroke-dashoffset: 62px;
+  }
+  65% {
+    stroke-dashoffset: -5px;
+  }
+  84% {
+    stroke-dashoffset: 4px;
+  }
+  100% {
+    stroke-dashoffset: -2px;
+  }
+}
+.ui-error-circle {
+  stroke-dasharray: 260.75219024795285px, 260.75219024795285px;
+  stroke-dashoffset: 260.75219024795285px;
+}
+.ui-error-line1 {
+  stroke-dasharray: 54px 55px;
+  stroke-dashoffset: 55px;
+  stroke-linecap: round;
+}
+.ui-error-line2 {
+  stroke-dasharray: 54px 55px;
+  stroke-dashoffset: 55px;
+  stroke-linecap: round;
+}
+.error-active .ui-error-circle {
+  animation: ani-error-circle 1.2s linear;
+}
+.error-active .ui-error-line1 {
+  animation: ani-error-line 0.15s 1.2s linear both;
+}
+.error-active .ui-error-line2 {
+  animation: ani-error-line 0.2s 0.9s linear both;
+}
+@keyframes ani-error-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani-error-circle {
+  0% {
+    stroke-dasharray: 0, 260.75219024795285px;
+    stroke-dashoffset: 0;
+  }
+  35% {
+    stroke-dasharray: 120px, 120px;
+    stroke-dashoffset: -120px;
+  }
+  70% {
+    stroke-dasharray: 0, 260.75219024795285px;
+    stroke-dashoffset: -260.75219024795px;
+  }
+  100% {
+    stroke-dasharray: 260.75219024795285px, 0;
+    stroke-dashoffset: -260.75219024795px;
+  }
+}
+
+
+.form .btn-container button .wait,
+.settings-form .btn-container button .wait{
+  font-size: var(--font-ss);
+  color: var(--white);
+   display: none;
+}
+
+.form .btn-container button:disabled .wait,
+.settings-form .btn-container button:disabled .wait{
+  display: flex;
+}
+
+.form .btn-container button:disabled,
+.settings-form .btn-container button:disabled{
+  opacity: 0.5;
+  cursor: progress;
+}
+
+.form .btn-container button:disabled .add,
+.settings-form .btn-container button:disabled .add{
+  display: none;
+}
+
+.form .btn-container button .add,
+.settings-form .btn-container button .add{
+  display: flex;
+  color: var(--white);
+}

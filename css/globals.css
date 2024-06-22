@@ -1,0 +1,317 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("font.css");
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: var(--black);
+  box-sizing: border-box;
+  font-size: var(--font-s);
+}
+hh
+html {
+  font-family: "Montserrat";
+  font-size: clamp(15px, 1.5vw, 1.25em);
+  background-color: var(--off-white);
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+:root {
+  --black: #0d0808;
+  --white: #ffffff;
+  --off-white: #f7f0f0;
+  --primary: #2e972e;
+  --secondary: #e6f3e6;
+  --danger: #ff0000;
+  --danger-2: #ffbfbf;
+  --grey: #e0dede;
+  --primary-gradient: linear-gradient(
+    134.16deg,
+    rgba(194, 169, 10, 0) -8.01%,
+    rgba(172, 191, 15, 0.85) -8%,
+    rgba(9, 128, 0, 0.84) 78.49%
+  );
+  --overlay-gradient-vertical: linear-gradient(
+    357.9deg,
+    #0d0808 13.91%,
+    rgba(13, 8, 8, 0.507807) 33.19%,
+    rgba(13, 8, 8, 0) 90.89%
+  );
+  --overlay-gradient-holizontal: linear-gradient(
+    270deg,
+    #0d0808 34.04%,
+    rgba(13, 8, 8, 0) 100%
+  );
+  --font-l: 1.4rem;
+  --font-m: 1.05rem;
+  --font-s: 0.9rem;
+  --font-ss: 0.7rem;
+  --font-xs: 0.5rem;
+  --radius: 0.9rem;
+  --radius-md: 0.7rem;
+  --radius-sm: 0.5rem;
+  --padding: 0.5rem;
+  --padding-2: calc(var(--padding) * 2);
+  --transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --cta-2-hover: brightness(85%);
+  --cta-hover: brightness(85%);
+}
+
+h2 {
+  font-size: var(--font-m);
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--off-white);
+  padding-bottom: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  overflow-y: auto;
+}
+.cta {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding);
+  padding-left: var(--padding-2);
+  padding-right: var(--padding-2);
+  background: var(--primary-gradient);
+  color: var(--off-white);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  width: fit-content;
+  font-weight: bold;
+  user-select: none;
+  outline: none;
+  border: none;
+  height: 2.5rem;
+  font-family: "Montserrat";
+}
+.cta:hover {
+  filter: var(--cta-hover);
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.admin-nav .link-active {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  height: 2.5rem;
+}
+
+.admin-nav {
+  width: calc(100% - 4rem);
+}
+
+@media screen and (max-width: 480px) {
+  .admin-nav .links {
+    position: fixed;
+    background-color: var(--white);
+    padding: 0.5rem;
+    border-radius: 1.2rem;
+    bottom: 1rem;
+    width: calc(100% - 2rem);
+    left: 1rem;
+    /* https://smoothshadows.com/#djEsMSw1LDAuMDgsNzksLTIsMCwjMmU5NzJlLCNmN2YwZjAsI2U2ZjNlNiwy */
+    box-shadow: 0px -0px 3px rgba(46, 151, 46, 0.02),
+      0px -0px 13px rgba(46, 151, 46, 0.03),
+      0px -1px 28px rgba(46, 151, 46, 0.05),
+      0px -1px 51px rgba(46, 151, 46, 0.06),
+      0px -2px 79px rgba(46, 151, 46, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .admin-nav .link {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 2.5rem;
+  }
+
+  .admin-nav .link-active {
+    background-color: var(--secondary);
+  }
+
+  .main-content {
+    padding-bottom: 5rem;
+  }
+}
+
+.admin-nav a span {
+  font-size: 0.8rem;
+}
+
+.admin-nav .logo {
+  height: 1.5rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.admin-nav .link {
+  transition: var(--transition);
+  user-select: none;
+}
+.admin-nav .link:hover {
+  opacity: 1;
+}
+.admin-nav .settings-icon img {
+  height: 2rem;
+  width: auto;
+  transition: var(--transition);
+  cursor: pointer;
+  user-select: none;
+}
+
+.admin-nav .settings-icon img:hover {
+  transform: rotate(60deg) scale(1.15);
+}
+
+.wrapper {
+  background-color: var(--white);
+  border-radius: var(--radius);
+}
+
+.tool-bar {
+  background-color: var(--off-white);
+  border-radius: var(--radius-md);
+}
+
+.tool-bar .tool {
+  background-color: var(--white);
+  height: 3rem;
+  width: 3rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  outline: 3px solid transparent;
+}
+
+@media screen and (max-width: 480px) {
+  .tool-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+  .tool-bar .tool {
+    width: 100%;
+    height: 4rem;
+  }
+}
+
+.tool-bar .tool:hover {
+  outline: 3px solid var(--secondary);
+}
+
+.tool-bar .tool img {
+  height: 1.5rem;
+  width: auto;
+}
+
+.tool-bar .tool .font-style {
+  height: 1rem;
+  width: auto;
+}
+
+.gradient-border * {
+  position: relative;
+  z-index: 2;
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  background: var(--primary-gradient);
+  z-index: 0;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  display: flex;
+  margin: -1px;
+  left: 0;
+  bottom: 0;
+  border-radius: inherit;
+}
+.gradient-border::after {
+  content: "";
+  position: absolute;
+  background: var(--white);
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+}
+
+.input-group {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
+.input-group span {
+  border-radius: var(--radius-sm);
+}
+
+.input-group input,
+.input-group .textarea {
+  outline: 0;
+  border: 0;
+  background-color: var(--white);
+  padding: var(--padding);
+  width: 100%;
+  /* border: 1px solid var(--primary); */
+  border-radius: var(--radius-sm);
+}
+
+.create-post {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.input-group .textarea span {
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  border: 0;
+  background-color: var(--white);
+  overflow: auto;
+}
+/* 
+.input-group input {
+  height: 2.5rem;
+} */

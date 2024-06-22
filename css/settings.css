@@ -1,0 +1,65 @@
+.settings-wrapper {
+  grid-template-columns: 1fr 12rem;
+  padding-bottom: 2rem;
+}
+@media screen and (max-width: 480px) {
+  .settings-wrapper {
+    padding-bottom: 1rem;
+  }
+}
+.settings-actions {
+  background-color: var(--white);
+  height: fit-content;
+  border-radius: var(--radius);
+}
+
+@media screen and (max-width: 640px) {
+  .settings-wrapper {
+    grid-template-columns: 1fr;
+    /* grid-template-rows: auto auto; */
+    height: fit-content;
+  }
+}
+
+.settings-form,
+.add-admin-form {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-wrapper .cta {
+  font-size: var(--font-ss);
+  width: 100%;
+}
+
+.settings-wrapper .change-password {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+.settings-wrapper .logout {
+  background: var(--danger-2);
+  color: var(--danger);
+}
+
+.input-group {
+  height: fit-content;
+}
+.input-group label {
+  font-weight: 600;
+}
+.input-group input::placeholder {
+  color: var(--black);
+}
+
+.add-admin-form .input-group input::placeholder{
+  opacity: 0.5;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  margin-top: auto;
+}
